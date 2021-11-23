@@ -42,9 +42,6 @@ app.post("/contact", (req, res, next) => {
     });
 })
 
-app.get("/", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "views/index.html"));
-})
 app.listen(process.env.PORT || 3000, () => {
     console.log("App listening on ", process.env.PORT || 3000);
 })
