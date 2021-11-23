@@ -15,6 +15,9 @@ app.use(cors());
 app.post("/contact", (req, res, next) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: {
             user: process.env.email,
             pass: process.env.pass
