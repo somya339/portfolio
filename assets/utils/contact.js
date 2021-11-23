@@ -25,17 +25,17 @@ form.addEventListener("submit", async (e) => {
     response.json().then(response => {
             console.log("email sent");
             console.log(response);
-            thisForm.querySelector('.loading').classList.remove('d-block');
-            thisForm.querySelector('.sent-message').classList.add('d-block');
-            thisForm.reset();
+            form.querySelector('.loading').classList.remove('d-block');
+            form.querySelector('.sent-message').classList.add('d-block');
+            form.reset();
         })
         .catch((error) => {
-            displayError(thisForm, error);
+            displayError(form, error);
         });
 });
 
-function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
+function displayError(form, error) {
+    form.querySelector('.loading').classList.remove('d-block');
+    form.querySelector('.error-message').innerHTML = error;
+    form.querySelector('.error-message').classList.add('d-block');
 }
