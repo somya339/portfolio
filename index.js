@@ -21,23 +21,38 @@ app.post("/contact", (req, res, next) => {
         }
     });
     console.log(req.body);
-    const mailOptions = {
-        from: `${req.body.email}`, // sender address
+    const mailOptions = { // sender address
         to: 'nodemailersignup@gmail.com', // list of receivers
         subject: req.body.subject, // Subject line
-        html: `<p>${req.body.message}<br> Thanks ${req.body.name}</p>` // plain text body
+        html: `<p>${req.body.email}</p><br><p>${req.body.message}<br> Thanks ${req.body.name}</p>` // plain text body
     };
-    transporter.sendMail(mailOptions, (err, info) => {
+    const revertOptions = { // sender address
+        to: `${req.body.email}`, // list of receivers
+        subject: "<h1>Thanks For your Review!</h1>", // Subject line
+        html: `<p>Dear ${req.body.name},<br> Thanks for reviewing my portfolio , will revert you as soon as notice your mail <br> Thanks and Regards <br> Somya Gupta</p>` // plain text body
+    };
+
+    transporter.sendMail(mailOptions, (err, infoin) => {
         if (err)
             res.status(501).send({
                 "success": false,
                 "error": err
             })
         else {
-            res.status(202).send({
-                "success": true,
-                "info": info
-            })
+            transporter.sendMail(revertOptions, (err, infoout) => {
+                if (err)
+                    res.status(501).send({
+                        "success": false,
+                        "error": err
+                    })
+                else {
+                    res.status(202).send({
+                        "success": true,
+                        "infomation for in coming mail": infoin,
+                        "information for in outgoing mail": infoout
+                    })
+                }
+            });
         }
     });
 })
