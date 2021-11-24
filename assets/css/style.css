@@ -278,7 +278,15 @@ h6 {
   background: url("../img/hero-background.jpeg") top right no-repeat;
   background-size: cover;
   position: relative;
+  display: block;
+  box-sizing: border-box;
+  /* clip-path: ellipse(60% 100% at 56.8% 0%); */
 }
+
+/* #hero {
+  height: 500px;
+  background-color: #dc3d4b;
+} */
 
 @media (min-width: 992px) {
   #hero {
@@ -294,7 +302,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  opacity: 0.8;
+  opacity: 0.1;
 }
 
 #hero h1 {
@@ -302,11 +310,15 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #393e45;
+  color: #393e46;
+}
+
+#hero h1 span {
+  color: #515658;
 }
 
 #hero p {
-  color: #596c7e;
+  color: rgb(249 242 241);
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
@@ -349,6 +361,22 @@ h6 {
     font-size: 20px;
     line-height: 24px;
   }
+}
+
+#hero {
+  cursor: none;
+  --cursorXpos: 50vw;
+  --cursorYpos: 50vh;
+}
+
+#hero::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: radial-gradient(circle 25rem at var(--cursorXpos) var(--cursorYpos), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+  z-index: 11;
+  opacity: 0.95;
 }
 
 /*--------------------------------------------------------------
@@ -1269,4 +1297,9 @@ section {
 .pt-page-delay300 {
   -webkit-animation-delay: .3s;
   animation-delay: .3s;
+}
+
+
+.icon-testimonial {
+  background: url("../img/testimonial.svg");
 }
