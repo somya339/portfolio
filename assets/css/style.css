@@ -280,7 +280,7 @@ h6 {
   position: relative;
   display: block;
   box-sizing: border-box;
-  /* clip-path: ellipse(60% 100% at 56.8% 0%); */
+  clip-path: ellipse(75% 100% at 50% 0%);
 }
 
 /* #hero {
@@ -1304,5 +1304,5 @@ section {
   filter : invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
 }
 .active img{
-  filter : none;
+  filter : invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
 }
