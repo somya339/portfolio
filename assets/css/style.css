@@ -1300,6 +1300,6 @@ section {
 }
 
 
-#test:hover img {
+#test:hover a > img {
   filter : invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
 }
