@@ -433,7 +433,7 @@ h6 {
   cursor: none;
   --cursorXpos: 50vw;
   --cursorYpos: 50vh;
-  --radius : 25em;
+  --radius: 25em;
 }
 
 #hero::before {
@@ -1237,6 +1237,8 @@ section {
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
+  height: 45px;
+  width: 177px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
@@ -1331,6 +1333,29 @@ section {
 .pt-page-scaleDown {
   -webkit-animation: scaleDown .7s ease both;
   animation: scaleDown .7s ease both;
+}
+
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border-top: 2px solid rgb(223, 223, 228);
+  border-right: 2px solid transparent;
+  animation: spinner .6s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes scaleDown {

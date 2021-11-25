@@ -6,6 +6,9 @@ const message = document.querySelector("#message")
 let thisForm
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    
+    document.querySelector(".pseudo").textContent ="";
+    document.querySelector(".pseudo").classList.add("spinner");
     thisForm = this;
     let data = {
         name: Fieldname.value,
@@ -24,7 +27,8 @@ form.addEventListener("submit", async (e) => {
     });
     response.json().then(response => {
             console.log("email sent");
-            console.log(response);
+            document.querySelector(".pseudo").classList.toggle("spinner");     
+            document.querySelector(".pseudo").textContent = "Send Message";
             form.querySelector('.loading').classList.remove('d-block');
             form.querySelector('.sent-message').classList.add('d-block');
             form.reset();
