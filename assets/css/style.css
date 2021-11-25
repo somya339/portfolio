@@ -144,6 +144,56 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Social Links
+--------------------------------------------------------------*/
+.socials {
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+
+}
+
+.socials div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+}
+
+
+.circle {
+  height: 70px;
+  width: 70px;
+  font-size: 45px;
+  background: rgb(6 5 12);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #4f91cb 1px 1px 1px inset, #878080 -1px -1px 1px inset;
+}
+
+
+.circle:hover .bi-github {
+  color: #f2f3f5;
+}
+
+.circle:hover .bxl-facebook {
+  color: #f2f3f5;
+}
+
+.circle:hover .bxl-instagram {
+  color: #e80368;
+}
+
+.circle:hover .bxl-linkedin {
+  color: #160cb1d4;
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
@@ -283,6 +333,22 @@ h6 {
   clip-path: ellipse(75% 100% at 50% 0%);
 }
 
+.bulb {
+  cursor: pointer !important;
+  display: block;
+  position: relative;
+  left: 40%;
+  bottom: 35%;
+  z-index: 13;
+  transform: rotateX(180deg);
+}
+
+.bulb i {
+  font-size: 50px;
+  color: rgb(252, 248, 6);
+}
+
+
 /* #hero {
   height: 500px;
   background-color: #dc3d4b;
@@ -367,6 +433,7 @@ h6 {
   cursor: none;
   --cursorXpos: 50vw;
   --cursorYpos: 50vh;
+  --radius : 25em;
 }
 
 #hero::before {
@@ -374,7 +441,7 @@ h6 {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: radial-gradient(circle 25rem at var(--cursorXpos) var(--cursorYpos), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+  background: radial-gradient(circle var(--radius) at var(--cursorXpos) var(--cursorYpos), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
   z-index: 11;
   opacity: 0.95;
 }
@@ -508,11 +575,15 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
+.skill {
+  font-size: 15px;
+}
+
 .skills .progress {
   height: 60px;
   display: block;
   background: none;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .skills .progress .skill {
@@ -532,6 +603,7 @@ section {
 
 .skills .progress-bar-wrap {
   background: #f2f3f5;
+  border-radius: 10px;
 }
 
 .skills .progress-bar {
@@ -539,6 +611,7 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #0563bb;
+  border-radius: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1300,9 +1373,10 @@ section {
 }
 
 
-#test:hover a > img {
-  filter : invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
+#test:hover a>img {
+  filter: invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
 }
-.active img{
-  filter : invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
+
+.active img {
+  filter: invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
 }

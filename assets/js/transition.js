@@ -1,15 +1,24 @@
 const hero = document.querySelector("#hero");
 
-hero.addEventListener("mousemove", e => {
-    // e.target.style.clipPath = `ellipse(60% ${e.y*2}% at ${e.x/8}% 0%)`
-})
 const trackMouse = (e) => {
-   hero.style.setProperty(
+    hero.style.setProperty(
         '--cursorXpos', `${e.clientX}px`
     )
     hero.style.setProperty(
         '--cursorYpos', `${e.clientY}px`
     )
 }
-hero.addEventListener('mousemove' , trackMouse);
+hero.addEventListener('mousemove', trackMouse);
+document.querySelector(".bulb").addEventListener("click", e => {
+    document.querySelector('#i').classList.toggle('bi-lightbulb');
+    if (document.querySelector('#i').classList.contains('bi-lightbulb')) {
+        hero.style.setProperty(
+            '--radius', '100em'
+        )
+    } else {
+        hero.style.setProperty(
+            '--radius', '25em'
+        )
+    }
 
+})
