@@ -1,5 +1,4 @@
 const hero = document.querySelector("#hero");
-
 const trackMouse = (e) => {
     hero.style.setProperty(
         '--cursorXpos', `${e.clientX}px`
@@ -21,4 +20,15 @@ document.querySelector(".bulb").addEventListener("click", e => {
         )
     }
 
+})
+document.querySelector(".portfolio-links a").addEventListener("click", (e) => {
+    switch (e.target.id) {
+        case "voop":
+            break;
+        case "construction":
+            template(data.construction);
+            break;
+        default:
+            break;
+    }
 })
