@@ -109,6 +109,7 @@ h6 {
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
+  
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -129,6 +130,9 @@ h6 {
 }
 
 @media (max-width: 992px) {
+  #hero{
+    clip-path: none;
+  }
   #header {
     width: 300px;
     background: #fff;
@@ -337,8 +341,7 @@ h6 {
   cursor: pointer !important;
   display: block;
   position: relative;
-  left: 40%;
-  bottom: 35%;
+  bottom: 100px;
   z-index: 13;
   transform: rotateX(180deg);
 }
@@ -433,7 +436,7 @@ h6 {
   cursor: none;
   --cursorXpos: 50vw;
   --cursorYpos: 50vh;
-  --radius: 25em;
+  --radius: 100em;
 }
 
 #hero::before {
