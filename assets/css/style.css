@@ -153,9 +153,9 @@ h6 {
 --------------------------------------------------------------*/
 .floating-btn {
   width: 100%;
-  left: 42%;
-  top: 64%;
-  position: fixed;
+  left: 35%;
+  top: 3%;
+  position: relative;
   z-index: 9999;
 }
 
