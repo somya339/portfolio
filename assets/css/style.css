@@ -153,9 +153,9 @@ h6 {
 --------------------------------------------------------------*/
 .floating-btn {
   width: 100%;
-  left: 42%;
+  left: 43%;
   top: 64%;
-  position: fixed;
+  position: absolute;
   z-index: 9999;
 }
 
@@ -1431,4 +1431,9 @@ section {
 
 .active img {
   filter: invert(100%) sepia(31%) saturate(46%) hue-rotate(439deg) brightness(150%) contrast(100%);
+}
+
+.logo-container{
+  display: flex;
+  justify-content: space-around;
 }
