@@ -110,6 +110,12 @@ h6 {
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
 
+  #bulb{
+    display: none;
+  }
+  #hero{
+    clip-path: none;
+  }
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -130,6 +136,12 @@ h6 {
 }
 
 @media (max-width: 992px) {
+  #bulb{
+    display: none;
+  }
+  /* #hero{
+    clip-path: none;
+  } */
   #header {
     width: 300px;
     background: #fff;
