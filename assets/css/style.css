@@ -131,6 +131,7 @@ h6 {
   transition: all 0.5s;
   padding: 15px;
   overflow-y: auto;
+  z-index: 10000;
 }
 
 @media (max-width: 992px) {
@@ -156,10 +157,7 @@ h6 {
 # Resume
 --------------------------------------------------------------*/
 .floating-btn {
-  width: 100%;
-  left: 43%;
-  top: 64%;
-  position: absolute;
+  margin:  10px auto;
   z-index: 9999;
 }
 
@@ -1440,4 +1438,5 @@ section {
 .logo-container{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
