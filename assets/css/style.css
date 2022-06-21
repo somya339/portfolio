@@ -113,9 +113,7 @@ h6 {
   #bulb{
     display: none;
   }
-  #hero{
-    clip-path: none;
-  }
+
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -139,9 +137,6 @@ h6 {
   #bulb{
     display: none;
   }
-  /* #hero{
-    clip-path: none;
-  } */
   #header {
     width: 300px;
     background: #fff;
@@ -151,9 +146,6 @@ h6 {
 }
 
 @media (min-width: 992px) {
-  #hero {
-    clip-path: none;
-  }
 
   #main {
     margin-left: 100px;
@@ -371,10 +363,10 @@ h6 {
   position: relative;
   display: block;
   box-sizing: border-box;
-  clip-path: ellipse(75% 100% at 50% 0%);
+  /* clip-path: ellipse(75% 100% at 50% 0%); */
 }
 
-.bulb {
+.bulb { 
   cursor: pointer !important;
   display: block;
   position: relative;
